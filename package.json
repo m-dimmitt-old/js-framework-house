@@ -1,0 +1,23 @@
+{
+  "name": "js-framework-house",
+  "version": "1.0.0",
+  "description": "house for building all your projects",
+  "main": "package.json",
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/cli": "^6.0.8"
+  },
+  "scripts": {
+    "angularfolder": "run(){ ng new $1; cd $1; ng serve --open; }; run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelDimmitt/quick-angular-non-global-install.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelDimmitt/quick-angular-non-global-install/issues"
+  },
+  "homepage": "https://github.com/MichaelDimmitt/quick-angular-non-global-install#readme"
+}
