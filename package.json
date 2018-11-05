@@ -9,7 +9,7 @@
     "@vue/cli": "^3.1.1"
   },
   "scripts": {
-    "angular": "run(){ if [ ! -d $1 ]; then ng new $1; cd $1; ng serve --open; }; run",
+    "angular": "test() { bash -c 'trap \"echo hi;\" EXIT; run(){ if [ ! -d xx ]; then ng new xx; fi; cd xx; ng serve --open;}; run xx;';}; test",
     "vue": "run(){ if [ ! -d $1 ]; then vue create $1; fi; cd $1; npm run serve;}; run"
   },
   "repository": {
