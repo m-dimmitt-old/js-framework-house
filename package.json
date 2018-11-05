@@ -5,10 +5,12 @@
   "main": "package.json",
   "dependencies": {},
   "devDependencies": {
-    "@angular/cli": "^6.0.8"
+    "@angular/cli": "^6.0.8",
+    "@vue/cli": "^3.1.1"
   },
   "scripts": {
-    "angularfolder": "run(){ ng new $1; cd $1; ng serve --open; }; run"
+    "angularfolder": "run(){ ng new $1; cd $1; ng serve --open; }; run",
+    "vue": "run(){ vue create $1; fi; cd $1; npm run serve;}; run"
   },
   "repository": {
     "type": "git",
