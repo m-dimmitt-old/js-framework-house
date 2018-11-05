@@ -9,8 +9,8 @@
     "@vue/cli": "^3.1.1"
   },
   "scripts": {
-    "angularfolder": "run(){ ng new $1; cd $1; ng serve --open; }; run",
-    "vue": "run(){ vue create $1; fi; cd $1; npm run serve;}; run"
+    "angular": "run(){ if [ ! -d $1 ]; then ng new $1; cd $1; ng serve --open; }; run",
+    "vue": "run(){ if [ ! -d $1 ]; then vue create $1; fi; cd $1; npm run serve;}; run"
   },
   "repository": {
     "type": "git",
