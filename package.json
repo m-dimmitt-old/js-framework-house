@@ -8,15 +8,16 @@
     "@vue/cli": "^3.1.1",
     "create-react-app": "^2.1.1"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
+    "setup": "npm install; npm install ember-cli --save-dev",
     "angular": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi; if [ ! -d $1 ]; then ng new     $1; fi; cd $1; ng serve --open; }; run",
     "cra": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi;     if [ ! -d $1 ]; then npm run ch $1; fi; cd $1; npm run start;}; run",
     "vue": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi;     if [ ! -d $1 ]; then vue create $1; fi; cd $1; npm run serve;}; run",
+    "ember": "npm run eh; run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi;   if [ ! -d $1 ]; then ember new  $1; fi; cd $1; ember serve;}; run",
     "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name'; echo ;",
     "ch": "createReactAppHelper() { create-react-app $1;}; createReactAppHelper",
-    "eh": "emberHelper() { if [ -d node_modules/ember-cli ]; then cat package.json | grep -v 'ember-cli\":' > test.json; cp test.json package.json ; else echo 'please run npm install ember-cli'; fi;}; emberHelper"
+    "eh": "emberHelper() { if [ -d node_modules/ember-cli ]; then cat package.json | grep -v 'ember-cli\":' > temp.json; mv temp.json package.json ; else echo 'please run npm install ember-cli --save-dev'; fi;}; emberHelper"
   },
   "repository": {
     "type": "git",
