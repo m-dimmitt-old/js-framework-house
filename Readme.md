@@ -1,23 +1,18 @@
-## Alternate repo name: Angular House. keeps new angular projects in this folder
-## without package.json -this will build an external folder
+## Run the script in package.json with an appname; your app will be created or served.
+
+## Usage example derived from the package.json
 ```bash
-npm install @angular/cli --save
-npx @angular/cli new my-app
-
-
-cd my-app
-npx @angular/cli serve --open
+git clone https://github.com/MichaelDimmitt/quick-angular-non-global-install.git;
+npm install;
+npm run angular angular-project-name;
+npm run vue vue-project-name;
+npm run cra react-project-name;
+npm run ember ember-project-name;
 ```
 
+## Already created the app? No problem, the project will start the server!
 
-## Using the package.json
-```bash
-git clone https://github.com/MichaelDimmitt/quick-angular-non-global-install.git
-npm install
-npm run name yourname
-```
-
-
-## Future case 
-1) might make move package json out of folder.
-2) make project from folder name and remove package json.
+## Future case
+1) Coming soon! preact implementation.
+1) Scripts will create projects into a folder matching that framework.
+<br/> example: `npm run vue appname` will create a project at `./vue/appname`
