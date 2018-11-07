@@ -16,3 +16,10 @@ npm run ember ember-project-name;
 1) Coming soon! preact implementation.
 1) Scripts will create projects into a folder matching that framework.
 <br/> example: `npm run vue appname` will create a project at `./vue/appname`
+
+## Request for additional frameworks! (click-me)[https://github.com/MichaelDimmitt/js-framework-house/issues/new]
+issues tab: https://github.com/MichaelDimmitt/js-framework-house/issues/new
+
+## Useful links:
+Regarding Preact:
+https://www.reddit.com/r/javascript/comments/5k682g/what_is_in_react_that_preact_does_not_have/
