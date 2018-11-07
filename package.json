@@ -7,13 +7,11 @@
     "@angular/cli": "^6.0.8",
     "@vue/cli": "^3.1.1",
     "create-react-app": "^2.1.1",
-    "preact-cli": "^2.2.1"
   },
   "devDependencies": {},
   "scripts": {
     "setup": "npm install; npm install ember-cli --save-dev",
     "//": "argsExist, appExist, moduleExist",
-    "preact": "create default preact-app",
     "angular": "run(){ if [ -z \"$1\" ];           then npm run prompt; return 0; fi; if [ ! -d $1 ]; then ng new     $1; fi; cd $1; ng serve --open; }; run",
     "cra": "run(){ if [ -z \"$1\" ];               then npm run prompt; return 0; fi; if [ ! -d $1 ]; then npm run ch $1; fi; cd $1; npm run start;}; run",
     "vue": "run(){ if [ -z \"$1\" ];               then npm run prompt; return 0; fi; if [ ! -d $1 ]; then vue create $1; fi; cd $1; npm run serve;}; run",
