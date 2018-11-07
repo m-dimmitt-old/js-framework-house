@@ -1,0 +1,14 @@
+{
+  "name": "js-framework-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact-cli": "^2.2.1"
+  }
+}
