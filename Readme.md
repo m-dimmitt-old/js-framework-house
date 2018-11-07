@@ -16,6 +16,8 @@ npm run ember ember-project-name;
 1) Coming soon! preact implementation.
 1) Scripts will create projects into a folder matching that framework.
 <br/> example: `npm run vue appname` will create a project at `./vue/appname`
+2) cache installing, if user repeatedly uses the same framework. elsewise reinstall everything.
+3) alternative solution, folder structure maintains its own nodemodules.
 
 ## Request for additional frameworks! (click-me)[https://github.com/MichaelDimmitt/js-framework-house/issues/new]
 issues tab: https://github.com/MichaelDimmitt/js-framework-house/issues/new
