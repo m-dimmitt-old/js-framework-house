@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preact":"run(){ preact create default $1; }; run",
+    "serve":"run(){ cd $1; npm run serve; }; run",
     "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
   },
   "author": "",

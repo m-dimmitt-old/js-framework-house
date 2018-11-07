@@ -11,7 +11,8 @@
     "fileName": "fileName(){ if [ -z \"$1\" ]; then npm run prompt; return 1; fi; }; fileName",
     "emberInstalled": "emberInstalled(){ if [ -d node_modules/ember-cli ]; then npm run fixEmber; else npm run prompt2; return 1; fi; }; emberInstalled",
     "fixEmber": "cat package.json | grep -v 'ember-cli\":' > temp.json; mv temp.json package.json",
-    "emberActuate": "run(){ if [ ! -d $1 ]; then ember new  $1; fi; cd $1; ember serve; }; run"
+    "emberActuate": "run(){ if [ ! -d $1 ]; then ember new  $1; fi; }; run",
+    "serve":"run(){ cd $1; ember serve; }; run"
   },
   "author": "",
   "license": "ISC",
