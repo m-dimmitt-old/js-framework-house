@@ -1,0 +1,15 @@
+{
+  "name": "js-framework-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "angular": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi; if [ ! -d $1 ]; then ng new $1; fi;}; run",
+    "serve":"run(){ cd $1; ng serve --open; }; run",
+    "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "js-framework-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ember": "run(){ npm run emberCheck $1 2>/dev/null && npm run emberActuate $1 || echo 'failed'; }; run",
+    "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';",
+    "prompt2": "echo 'ember-cli node_module does not exist 🙂,'; echo 'please use `npm install ember-cli --save-dev`';",
+    "emberCheck": "run(){ npm run fileName $1 2>/dev/null && npm run emberInstalled $1 2>/dev/null ;}; run",
+    "fileName": "fileName(){ if [ -z \"$1\" ]; then npm run prompt; return 1; fi; }; fileName",
+    "emberInstalled": "emberInstalled(){ if [ -d node_modules/ember-cli ]; then npm run fixEmber; else npm run prompt2; return 1; fi; }; emberInstalled",
+    "fixEmber": "cat package.json | grep -v 'ember-cli\":' > temp.json; mv temp.json package.json",
+    "emberActuate": "run(){ if [ ! -d $1 ]; then ember new  $1; fi; }; run",
+    "serve":"run(){ cd $1; ember serve; }; run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}

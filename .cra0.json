@@ -1,0 +1,16 @@
+{
+  "name": "js-framework-house",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cra": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi; if [ ! -d $1 ]; then npm run ch $1; fi;}; run",
+    "ch": "createReactAppHelper() { create-react-app $1;}; createReactAppHelper",
+    "serve":"run(){ cd $1; npm run start; }; run",
+    "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
