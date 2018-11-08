@@ -3,13 +3,7 @@
   "version": "1.0.0",
   "description": "house for building all your projects",
   "main": "package.json",
-  "dependencies": {
-    "@angular/cli": "^6.2.7",
-    "@vue/cli": "^3.1.1",
-    "create-react-app": "^2.1.1",
-    "ember-cli": "^3.5.0",
-    "preact-cli": "^2.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "cleanup": "rm -R -- */",
