@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "vue": "run(){ if [ -z \"$1\" ];               then npm run prompt; return 0; fi; if [ ! -d $1 ]; then vue create $1; fi; }; run",
+    "vue": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi; if [ ! -d $1 ]; then vue create $1; fi; }; run",
     "serve":"run(){ cd $1; npm run serve; }; run",
     "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
   },

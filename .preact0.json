@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preact": "run(){ echo $(preact create default $1) 2>/dev/null; }; run",
+    "preact": "run(){ if [ -z \"$1\" ]; then npm run prompt; return 0; fi; if [ ! -d $1 ]; then preact create default $1; }; run",
     "serve": "run(){ cd $1; open https://localhost:8080; npm run serve; }; run",
     "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
   },
