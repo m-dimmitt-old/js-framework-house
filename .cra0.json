@@ -12,6 +12,5 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "create-react-app": "^2.1.1"
   }
 }

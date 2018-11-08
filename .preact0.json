@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preact":"run(){ preact create default $1; }; run",
-    "serve":"run(){ cd $1; npm run serve; }; run",
+    "preact": "run(){ echo $(preact create default $1) 2>/dev/null; }; run",
+    "serve": "run(){ cd $1; open https://localhost:8080; npm run serve; }; run",
     "prompt": "echo 'no arg passed 🙂,'; echo 'exiting: please provide a file name';"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "preact-cli": "^2.2.1"
   }
 }

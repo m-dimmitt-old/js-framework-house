@@ -11,6 +11,5 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/cli": "^7.0.4"
   }
 }
