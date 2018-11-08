@@ -9,18 +9,25 @@
     "cleanup": "rm -R -- */",
     "setup": "npm run runner i",
     "all": "run(){ npm run runner make $1; npm run show;}; run",
+    "fixAll": "run(){ npm run runner fix $1;}; run",
+
     "runner": "run(){ npm run $1 vue @vue/cli $2; npm run show; npm run $1 angular @angular/cli $2; npm run $1 ember ember-cli $2; npm run $1 cra create-react-app $2; npm run $1 preact preact-cli $2; }; run",
+
     "i": "run(){ mkdir $1; cp .$10.json $1/package.json; cd $1; npm install $2 --save; }; run",
     "app": "run(){ cd $1; npm run $1 $2; npm run serve $2; }; run",
     "make": "run(){ cd $1; npm run $1 $3; }; run",
     "show": "dir(){ for d in ./*/ ; do (cd \"$d\" && echo \"$d\" && $*); done; }; echo 'project update: look at all of the cool projects! ✨ ✨ 🌈 '; dir ls",
+
     "angular": "npm run app angular",
     "vue": "npm run app vue",
     "cra": "npm run app cra",
     "ember": "npm run app ember",
     "preact": "npm run app preact",
+
     "testWillDeletePreviousContent": "rm -rf ember; npm run cleanup; npm run setup; npm run all example;",
-    "test": "rm -rf */example; npm run show; npm run all example;"
+    "test": "rm -rf */example; npm run show; npm run all example;",
+
+    "fix":"run(){ cd $1; mv package-lock.json .old.package-lock.json; rm -rf node_modules; cat package.json | grep $2 >> .historical_record.txt; cp ../.$10.json package.json; npm install $2 --save;}; run"
   },
   "repository": {
     "type": "git",
